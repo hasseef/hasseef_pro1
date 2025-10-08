@@ -1,0 +1,55 @@
+<!doctype html><html lang="ar" dir="rtl"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>منصة حصيف — v33 Enterprise</title>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head><body>
+<header class="header"><div class="container row">
+  <div class="brand">
+    <img src="assets/img/hasseef.png" alt="Hasseef"/>
+    <div><div class="title">منصة حصيف — تكامل وطني</div><div class="muted">مواءمة مع رؤية 2030</div></div>
+    <span id="role-pill" class="role-pill"></span>
+  </div>
+  <div class="partner-logos">
+    <img src="assets/img/vision.png" alt="Vision 2030"/>
+    <img src="assets/img/talbiya.png" alt="Talbiya" style="height:38px"/>
+  </div>
+</div></header>
+
+<section class="hero"><div class="container">
+  <div class="hero-visual"></div>
+  <div class="grid grid-3" style="margin-top:16px">
+    <div class="card"><h3>الحسابات</h3>
+      <div class="grid grid-3 nav-accounts">
+        <a href="accounts/individual.html">الأفراد</a>
+        <a href="accounts/university.html">الجامعات</a>
+        <a href="accounts/private.html">القطاع الخاص</a>
+        <a href="accounts/nonprofit.html">القطاع غير الربحي</a>
+        <a href="accounts/government.html">الجهات الحكومية</a>
+        <a href="accounts/emirate.html">الإمارة</a>
+        <a href="accounts/donor.html">المانح/التمويلي</a>
+        <a href="partners/index.html">الشركاء الاستراتيجيون</a>
+        <a href="support/ticket.html">الدعم الفني</a>
+      </div>
+    </div>
+    <div class="card"><h3>التقارير</h3><p>رسوم ومؤشرات حية + PDF/CSV.</p><a class="btn" href="modules/reports.html">فتح التقارير</a></div>
+    <div class="card"><h3>سوق المرافق</h3><p>خريطة + بطاقات + حجز.</p><a class="btn" href="modules/facility-market.html">استعراض السوق</a></div>
+  </div>
+  <div class="grid grid-3" style="margin-top:16px">
+    <div class="card"><h3>الوظائف</h3><a class="btn secondary" href="modules/jobs.html">فتح الوظائف</a></div>
+    <div class="card"><h3>الاستشارات</h3><a class="btn secondary" href="modules/consultations.html">فتح الاستشارات</a></div>
+    <div class="card"><h3>مواءمة 2030/SDGs</h3><a class="btn secondary" href="modules/alignment.html">فتح المواءمة</a></div>
+  </div>
+  <canvas id="kpiChart" height="120" style="margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:12px"></canvas>
+</div></section>
+
+<footer class="footer"><div class="container">© 2025 منصة حصيف — v33 Enterprise (عينة عرض). أضف ?role=admin أو ?role=delegate لعرض الصلاحيات.</div></footer>
+<script src="assets/js/util.js"></script>
+<script>
+const ctx=document.getElementById('kpiChart');
+new Chart(ctx,{type:'line',data:{labels:['Q1','Q2','Q3','Q4'],datasets:[
+  {label:'مبادرات',data:[12,19,23,31]},
+  {label:'متطوعون',data:[220,340,480,660]}
+]},options:{responsive:true,plugins:{legend:{position:'bottom'}}}});
+</script>
+</body></html>
